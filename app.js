@@ -180,30 +180,127 @@ _____________________ Answer ________________________________________ */
 
 
 
+/*___________________________ Question no 16 ________________________
+todo list till delete
+_____________________ Answer ________________________________________ */
+// function saveData(){let getInput = document.getElementById('userinput').value;
+//     if(getInput == ''){alert('plz enter data');
+//         return;
+//     };
+//     let getData = localStorage.getItem('task');
+//        if(getData == null){getData = []}
+//        else{getData = JSON.parse(getData)};
+
+//     getData.push(getInput);
+//     getData = JSON.stringify(getData);
+//     localStorage.setItem('task',getData);
+//     document.getElementById('userinput').value = '';
+//     document.getElementById('userinput').focus();
+//     // we call show data 
+//     showData()
+// }
+// // show data
+// function showData(){let gerFromLocalStorage = localStorage.getItem('task');
+//     gerFromLocalStorage = JSON.parse(gerFromLocalStorage);
+//     if(gerFromLocalStorage){let list = document.getElementById('display');
+//         list.innerHTML = '';
+//         for(let i = 0; i<gerFromLocalStorage.length;i++){
+//             let li = document.createElement('li');
+//             let liContent = document.createTextNode(gerFromLocalStorage[i]);
+//             li.appendChild(liContent);
+//             let btn = document.createElement('button');
+//             let btnContent = document.createTextNode('Delete');
+//             btn.setAttribute('onclick',`deleting(${i})`)
+//             btn.appendChild(btnContent);
+//             list.appendChild(li);
+//             list.appendChild(btn);
+//         }
+//     }
+//     else{`<li> No item found in local storage</li>`}
+// }
+// // now we create function for delete
+// function deleting(index){let gerFromLocalStorage = localStorage.getItem('task');
+//     gerFromLocalStorage = JSON.parse(gerFromLocalStorage);
+//     gerFromLocalStorage.splice(index,1);
+//     gerFromLocalStorage = JSON.stringify(gerFromLocalStorage);
+//     localStorage.setItem('task',gerFromLocalStorage);
+
+//     // for refreshing 
+// showData()
+// }
+
+
+/*___________________________ Question no 17 ________________________
+
+_____________________ Answer ________________________________________ */
+//  // Get counter value from local storage or start from 0
+//     let count = localStorage.getItem('counter') ? Number(localStorage.getItem('counter')) : 0;
+//     // Display the initial counter
+//     const counterDisplay = document.getElementById('counter');
+//     counterDisplay.textContent = count;
+//     // Function to update display and localStorage
+//     function updateCounter() {
+//       counterDisplay.textContent = count;
+//       localStorage.setItem('counter', count);
+//     }
+//     function increment() {
+//       count++;
+//       updateCounter();
+//     }
+//     function decrement() {
+//       count--;
+//       updateCounter();
+//     }
+//     function resetCounter() {
+//       count = 0;
+//       updateCounter();
+//     }
+// nn
+// let count = localStorage.getItem('counter')?Number(localStorage.getItem('counter')) : 0;
+// const  counterDisplay = document.getElementById('counter');
+// counterDisplay.textContent = count;
+// function updateCounter(){
+//     counterDisplay.textContent = count;
+//     localStorage.setItem('counter',count)
+// }
+// function increment(){count++;
+//     updateCounter();
+// }
+// function decrement(){count--;
+//     updateCounter();
+// }
+// function resetCounter(){count = 0;
+//     updateCounter()
+// }
+
+
 /*___________________________ Question no 1 ________________________
 
 _____________________ Answer ________________________________________ */
+// let gerFromLocalStorage = localStorage.getItem('task');
+// if(gerFromLocalStorage){gerFromLocalStorage = Number(gerFromLocalStorage)}
+// else{gerFromLocalStorage = 0};
 
+// let getDisplay = document.getElementById('display');
+// getDisplay.textContent = gerFromLocalStorage;
 
+// function updateCounter(){getDisplay.textContent = gerFromLocalStorage;
+//     localStorage.setItem('task',gerFromLocalStorage)
+// }
 
+// function decrement (){if(gerFromLocalStorage > 0){gerFromLocalStorage --;
+// }
+// else{gerFromLocalStorage = 0 }
+//     updateCounter();
+// }
 
+// function increment(){gerFromLocalStorage ++;
+//     updateCounter();
+// }
 
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ *//*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
+// function reset(){gerFromLocalStorage = 0;
+//     updateCounter();
+// }
 /*___________________________ Question no 1 ________________________
 
 _____________________ Answer ________________________________________ */
