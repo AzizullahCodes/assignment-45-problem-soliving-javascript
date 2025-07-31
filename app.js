@@ -341,102 +341,106 @@ _____________________ Answer ________________________________________ */
 /*___________________________ Question no 21 ________________________
 
 _____________________ Answer ________________________________________ */
-// let display = document.getElementById("display");
 
-// function press(value){
-//   display.value += value;
-// }
+// const greetUser = ()=>{return ()=>{return 'hello user???'}}
 
-// function clearDisplay(){
-//   display.value = "";
-// }
+// // const output = greetUser();
+// // console.log(output())
+// const output = greetUser()();
+// console.log(output)
 
-// function calculate(){
-//   let input = display.value;
-//   let num1="", num2="", operator="";
-//   let foundOp = false;
-
-//   // Separate numbers and operator
-//   for(let i=0; i<input.length; i++){
-//     let char = input[i];
-//     if(char=='+' || char=='-' || char=='*' || char=='/'){
-//       operator = char;
-//       foundOp = true;
-//     } else {
-//       if(!foundOp) num1 += char;
-//       else num2 += char;
-//     }
-//   }
-
-//   num1 = Number(num1);
-//   num2 = Number(num2);
-
-//   let result = 0;
-
-//   if(operator == '+'){
-//     result = num1 + num2;
-//   }
-//   else if(operator == '-'){
-//     result = num1 - num2;
-//   }
-//   else if(operator == '*'){
-//     result = num1 * num2;
-//   }
-//   else if(operator == '/'){
-//     result = num1 / num2;
-//   }
-
-//   display.value = result;
+// const greetUser = (cb)=>{
+//     const showCbValue = cb();
+//     console.log(showCbValue);
+//     const user = 'Ahmed';
+//      return ()=>{
+//      return `${showCbValue}  ${user}`;}
 // }
 
 
+// const showUser = ()=>{return 'welcome'}
+// const output =greetUser(showUser);
+// console.log(output())
+/*___________________________ Question no 22 ________________________
+Double the Numbers 
+Create a higher-order function that takes an array and a function as an argument. 
+It should return a new array where the function is applied to every element. 
+Example Output: 
 
-/*___________________________ Question no 1 ________________________
+
+input: [1, 2, 3] 
+output: [2, 4, 6]   // if the function doubles numbers
+_____________________ Answer ________________________________________ */
+// function doubleNumber(num){return num*2;}
+// function higherOrder(arr,func){let newArr = [];
+//     for(let i = 0; i<arr.length;i++){newArr.push(func(arr[i]))}
+//     return newArr;
+// }
+
+// let result = higherOrder([1,2,3],doubleNumber);
+// console.log(result)
+
+/*___________________________ Question no 23 ________________________
+Square the Numbers 
+Create a higher-order function that takes an array and a function as an argument. 
+It should return a new array where each number is squared. 
+Example Output: 
+input: [1, 2, 3, 4] 
+output: [1, 4, 9, 16]
 
 _____________________ Answer ________________________________________ */
-let display = document.getElementById('display');
-function press(value){display.value = display.value + value;}
+// // callback function 
+// function squaring(num){return num*num;}
+// // processing 
+// function higherOrder(arr,cb){let ans = [];
+//     for(let i = 0; i<arr.length;i++){ans.push(cb(arr[i]))}
+//     return ans;
+// }
 
-function clearDisplay(){display.value = '';}
+// let final = higherOrder([2,3,4],squaring);
+// console.log(final)
 
-function calculate(){let input = display.value;
-    let num1 = '',num2 = '',operator = '';
-    let foundOp = false;
-    // seperate number and operator
-    for(let i = 0; i <input.value; i++){let char = input[i];
-        if(char == '+'||char == '-' ||char == '/'|| char =='*'){operator = char;
-            foundOp = true;
-        }
-       else{if(!foundOp){num1 = num1 + char;}
-    else{num2 = num2 + char;}}
-    }
-}
+/*___________________________ Question no 24 ________________________
+Custom Greeting 
+Create a higher-order function that returns a new function. 
+The returned function should take a name and print:
+Hello <name>! 
+
+Example Output: 
+
+const greet = createGreet("Hello");
+greet("Aziz"); // Output: Hello Aziz!
+_____________________ Answer ________________________________________ */
+// function createGreet(word){
+//     return function good(name){console.log(`${word} ${name} !`)}
+// }
+// const greet = createGreet('hello');;
+// greet('Aziz')
+
+/*___________________________ Question no 25 ________________________
+higher order function examples
+_____________________ Answer ________________________________________ */
+// function getData(){
+//     return function(){console.log('function from getData')
+    
+// }}
+// let func = getData();
+// func();
+
+// function getData(loadData){loadData();}
 
 
+// let load = ()=>{console.log('load data')}
 
-
-/*___________________________ Question no 1 ________________________
+// getData(load)
+/*___________________________ Question no 26 ________________________
 
 _____________________ Answer ________________________________________ */
-
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
+// const arr1 = [1,2,3,4];
+// const arr2 = [];
+// for(let i = 0; i<arr1.length;i++){arr2.push(arr1[i]*2)}
+// console.log(arr2)
+// first 
 
 
 /*___________________________ Question no 1 ________________________
