@@ -231,7 +231,7 @@ _____________________ Answer ________________________________________ */
 
 
 /*___________________________ Question no 17 ________________________
-
+counter app by local storage
 _____________________ Answer ________________________________________ */
 //  // Get counter value from local storage or start from 0
 //     let count = localStorage.getItem('counter') ? Number(localStorage.getItem('counter')) : 0;
@@ -274,8 +274,8 @@ _____________________ Answer ________________________________________ */
 // }
 
 
-/*___________________________ Question no 1 ________________________
-
+/*___________________________ Question no 18 ________________________
+counter 
 _____________________ Answer ________________________________________ */
 // let gerFromLocalStorage = localStorage.getItem('task');
 // if(gerFromLocalStorage){gerFromLocalStorage = Number(gerFromLocalStorage)}
@@ -301,32 +301,116 @@ _____________________ Answer ________________________________________ */
 // function reset(){gerFromLocalStorage = 0;
 //     updateCounter();
 // }
+/*___________________________ Question no 19 ________________________
+Theme change by toggle classList
+_____________________ Answer ________________________________________ */
+
+// 1. Load saved theme
+//   if(localStorage.getItem('theme') === 'dark'){
+//     document.body.classList.add('dark');
+//   }
+
+//   // 2. Toggle function
+//   function toggleMode() {
+//     document.body.classList.toggle('dark');
+
+//     // Save current theme in local storage
+//     if(document.body.classList.contains('dark')){
+//       localStorage.setItem('theme', 'dark');
+//     } else {
+//       localStorage.setItem('theme', 'light');
+//     }
+//   }
+// if (localStorage.getItem('theme') === 'red'){document.body.classList.add('red')}
+
+// function toggleMode(){document.body.classList.toggle('clr')};
+// if(document.body.classList.contains('red')){localStorage.setItem('theme','red')}
+// else{localStorage.setItem('theme','blue')}
+
+
+/*___________________________ Question no 20 ________________________
+previousElementSibling
+_____________________ Answer ________________________________________ */
+// let get = document.getElementById('center');
+// console.log(get);
+// let next = get.nextElementSibling.nextElementSibling;
+// console.log(next)
+// let last = get.previousElementSibling;
+// console.log(last)
+
+/*___________________________ Question no 21 ________________________
+
+_____________________ Answer ________________________________________ */
+// let display = document.getElementById("display");
+
+// function press(value){
+//   display.value += value;
+// }
+
+// function clearDisplay(){
+//   display.value = "";
+// }
+
+// function calculate(){
+//   let input = display.value;
+//   let num1="", num2="", operator="";
+//   let foundOp = false;
+
+//   // Separate numbers and operator
+//   for(let i=0; i<input.length; i++){
+//     let char = input[i];
+//     if(char=='+' || char=='-' || char=='*' || char=='/'){
+//       operator = char;
+//       foundOp = true;
+//     } else {
+//       if(!foundOp) num1 += char;
+//       else num2 += char;
+//     }
+//   }
+
+//   num1 = Number(num1);
+//   num2 = Number(num2);
+
+//   let result = 0;
+
+//   if(operator == '+'){
+//     result = num1 + num2;
+//   }
+//   else if(operator == '-'){
+//     result = num1 - num2;
+//   }
+//   else if(operator == '*'){
+//     result = num1 * num2;
+//   }
+//   else if(operator == '/'){
+//     result = num1 / num2;
+//   }
+
+//   display.value = result;
+// }
+
+
+
 /*___________________________ Question no 1 ________________________
 
 _____________________ Answer ________________________________________ */
+let display = document.getElementById('display');
+function press(value){display.value = display.value + value;}
 
+function clearDisplay(){display.value = '';}
 
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
+function calculate(){let input = display.value;
+    let num1 = '',num2 = '',operator = '';
+    let foundOp = false;
+    // seperate number and operator
+    for(let i = 0; i <input.value; i++){let char = input[i];
+        if(char == '+'||char == '-' ||char == '/'|| char =='*'){operator = char;
+            foundOp = true;
+        }
+       else{if(!foundOp){num1 = num1 + char;}
+    else{num2 = num2 + char;}}
+    }
+}
 
 
 
