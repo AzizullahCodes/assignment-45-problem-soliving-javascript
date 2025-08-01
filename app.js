@@ -610,23 +610,77 @@ _____________________ Answer ________________________________________ */
 
 /*___________________________ Question no 36 ________________________
 
+Create a function that accepts a number and a callback.
+The callback should return either double or triple of that number.
+
+Expected Output Example:
+If input = 4 and callback chooses triple → Output: 12
 _____________________ Answer ________________________________________ */
+// function higher(num, cb){let getCbValue = cb();
+//     let  numValue = num;
+//     return function(){let ans;
+//         if(getCbValue === 'single'){ans = num;}
+//         else if(getCbValue === 'double'){ans = num*2;}
+//         else if(getCbValue === 'tripple'){ans = num * 3;
+//         }
+//         else{ans = num*4}
+//         return ans;
+//     }
+// }
+// let value = ['single','double','tripple','fourth']
+// function callback(){let random = Math.random() * value.length;
+//     random = Math.floor(random);
+//     let final = value[random];
+//     return final;
+// }
+
+// let output = higher(4,callback);
+// console.log(output())
 
 
 
 
+/*___________________________ Question no 37 ________________________
+ Create a function that accepts an array and a callback.
+The callback should decide what to do with the array: sum, max, or min.
 
-/*___________________________ Question no 1 ________________________
+Expected Output Example:
+If array = [3, 5, 1] and callback chooses max → Output: Max is 5
 
 _____________________ Answer ________________________________________ */
+// function higher(arr,cb){let getCbValue = cb();
+//     let gerArr = arr;
+//     return function(){
+//         if(getCbValue === 'sum'){let result = 0;
+//             for(let key of gerArr){result = key + result}
+//     return result}
+//     if(getCbValue === 'max'){let result = 0;
+//             let maxNumber = Math.max(...gerArr);
+//             result = maxNumber;
+//     return result}
+//     else{let minNum = Math.min(...gerArr);
+//         result = minNum;
+//         return result;
+//     }
+//     }
+    
+// }
 
+// function callback(){return 'min';}
 
+// let output = higher([2,4,7],callback);
+// console.log(output())
 
+/*___________________________ Question no 38 ________________________
+Create a function processUserInput that takes a name and a callback.
 
-/*___________________________ Question no 1 ________________________
-
+The callback should display: Hello <name>!
 _____________________ Answer ________________________________________ */
+function callback(name,cb){}
 
+function processing(callback){return 'Aziz';}
+
+processing('Aziz',callback)
 
 
 
