@@ -339,7 +339,7 @@ _____________________ Answer ________________________________________ */
 // console.log(last)
 
 /*___________________________ Question no 21 ________________________
-
+higher order function
 _____________________ Answer ________________________________________ */
 
 // const greetUser = ()=>{return ()=>{return 'hello user???'}}
@@ -443,71 +443,172 @@ _____________________ Answer ________________________________________ */
 // first 
 
 
-/*___________________________ Question no 1 ________________________
+/*___________________________ Question no 27 ________________________
+higher order function
+_____________________ Answer ________________________________________ */
+// function greet(cb){const showCbValue = cb();
+//     console.log(showCbValue);
+//     const user = 'ahmed';
+
+//     return function(){return `${showCbValue} ${user}`}
+// }
+// function showUser(){return 'welcome'}
+
+// const output = greet(showUser);
+// console.log(output())
+
+/*___________________________ Question no 28 ________________________
+Create a function that accepts a number and a callback function.
+The callback should return a multiplier.
+The main function should multiply the number by the value returned from the callback.
+
+Expected Output Example:
+If number = 5 and callback returns 3 → Output: 15
+_____________________ Answer ________________________________________ */
+// function higher(cb){const num = cb();
+//     const anotherNumber = 20;
+//     return function(){return `${anotherNumber * num}`}
+// }
+
+// function call(){return 5;}
+// let output = higher(call);
+// console.log(output())
+
+/*___________________________ Question no 29 ________________________
+
+Create a function that accepts a callback which returns a greeting (like "Good Morning").
+Then, the function should return a new function that takes a name and prints "Greeting Name".
+
+Expected Output Example:
+If callback returns "Good Morning" and name = "Ali" → Output:
+Good Morning Ali
+_____________________ Answer ________________________________________ */
+// function greeting(cb){const getCbValue = cb();
+//     const name = 'Aziz';
+//     return function(){return `${getCbValue} ${name}`}
+// }
+// function greet(){return 'Good Morning'}
+
+// let output = greeting(greet)();
+// console.log(output)
+
+/*___________________________ Question no 30 ________________________
+Make a function that generates a random number (1 to 10) and passes it to a callback.
+The callback should return a string like "Your lucky number is X".
+
+Expected Output Example:
+Your lucky number is 7
+_____________________ Answer ________________________________________ */
+// function callback(take){let getTake = take();
+//     return function(){return `your lucky number is ${getTake}`}
+// }
+
+// function main(){let random = Math.random()*10
+//     random = random + 1;
+//     random = Math.floor(random);
+//    return random;
+// }
+// let output = callback(main);
+// console.log(output())
+/*___________________________ Question no 31 ________________________
+Create a function that accepts two numbers and a callback.
+The callback should decide which operation to perform (addition or subtraction).
+
+Expected Output Example:
+If numbers = 8 and 3 and callback chooses subtraction → Output:
+Result is 5
 
 _____________________ Answer ________________________________________ */
+// function higher(cb){const operator = cb();
+//     let num1 = 2;
+//     let num2 = 5;
+//     return function(){let result;
+//         if(operator === '+'){result = num1 + num2;}
+//         else if(operator === '-'){result = num1 -num2;}
+//         else if(operator === '*'){result = num1 * num2;}
+//         else if(operator === '/'){result = num1 / num2;}
+//         else{result = 'not vaid operator'}
+//         return `${num1} ${operator} ${num2} = ${result}`;
+        
+        
+//       }
+// }
+// function call(){return '*';}
 
-
-
-/*___________________________ Question no 1 ________________________
-
+// let ans = higher(call);
+// console.log(ans())
+/*___________________________ Question no 32 ________________________
+Detailed example of call back function
 _____________________ Answer ________________________________________ */
+// function higher(a,b,cb){let operator = cb();
+//     let valueA = a;
+//     let vauleB = b;
+//     return function(){let result;
+//         if(operator === '+'){result = valueA + vauleB;}
+//        else if(operator === '-'){result = valueA - vauleB;}
+//         else if(operator === '/'){result = valueA / vauleB;}
+//        else if(operator === '*'){result = valueA * vauleB;}
+//         else{result = 'not valid operator'};
+//         return result;
+//     }
+
+// }
 
 
 
-/*___________________________ Question no 1 ________________________
+// function call(){return '*';}
+// let ans = higher(5,4,call);
+// console.log(ans())
 
+
+/*___________________________ Question no 33 ________________________
+Create a function that takes a callback which returns a role (like "Admin").
+The function should return another function that takes a username and prints "Welcome back, 
+username (Role)".
+
+Expected Output Example:
+If role = "Admin" and username = "Sara" → Output:
+Welcome back, Sara (Admin)
 _____________________ Answer ________________________________________ */
+// function higher(cb){let getCb = cb();
+//     return function(){return `welcome back ${getCb}`}
+// }
+
+// function callback(){return 'Sara';}
+
+// let ans = higher(callback);
+// console.log(ans())
 
 
-
-/*___________________________ Question no 1 ________________________
-
+/*___________________________ Question no 34 ________________________
+create dynamic url
 _____________________ Answer ________________________________________ */
+// function openWebsite(){let getInput = document.getElementById('userinput').value.trim();
+//          document.getElementById('userinput').value = '';
+//          document.getElementById('userinput').focus();
+//     if(getInput !== ''){let fullUrl = "https://www." + getInput + ".com";
+//         window.open(fullUrl,"_blank","width:400px; height: 400px;");
+//     }
+//     else{alert('plz enter a website name')}
+// }
 
 
 
 
-
-/*___________________________ Question no 1 ________________________
-
+/*___________________________ Question no 35 ________________________
+create dynamic url
 _____________________ Answer ________________________________________ */
+// function openWebsite(){let getInput = document.getElementById('userinput').value.trim();
+//     document.getElementById('userinput').value = '';
+//     document.getElementById('userinput').focus();
+//     if(getInput !== ''){let createUrl = "https://www." + getInput + ".com";
+//         window.open(createUrl,"_blank");
+//     }
+//     else{alert('plz enter site name')}
+// }
 
 
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ *//*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-/*___________________________ Question no 1 ________________________
+/*___________________________ Question no 36 ________________________
 
 _____________________ Answer ________________________________________ */
 

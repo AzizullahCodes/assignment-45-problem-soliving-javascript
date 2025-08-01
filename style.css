@@ -1,4 +1,4 @@
-/* body {
+/* /* body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 50px;
@@ -18,7 +18,7 @@
      .clr{background-color:blue ;} */
 
      /* 21 */
-     body{
+     /* body{
       display:flex;
       justify-content:center;
       align-items:center;
@@ -53,4 +53,4 @@
       color:#fff;
       border-radius:5px;
     }
-    button:hover{background:#777;}
+    button:hover{background:#777;} */ 
