@@ -672,106 +672,207 @@ _____________________ Answer ________________________________________ */
 // console.log(output())
 
 /*___________________________ Question no 38 ________________________
+example of call back function
+_____________________ Answer ________________________________________ */
+// function calculation(m,n){let ans = m + n;
+//     return ans;
+// }
+
+// // process 
+// function general(cb){return cb(3,5)};
+// let output = general(calculation);
+// console.log(output)
+
+/*___________________________ Question no 39 ________________________
 Create a function processUserInput that takes a name and a callback.
 
 The callback should display: Hello <name>!
 _____________________ Answer ________________________________________ */
-function callback(name,cb){}
 
-function processing(callback){return 'Aziz';}
+// function callback(name){return `Hello ${name}`}
 
-processing('Aziz',callback)
+// function process(cb){return cb('Aziz')};
+
+// let output = process(callback);
+// console.log(output)
 
 
 
-/*___________________________ Question no 1 ________________________
+/*___________________________ Question no 40 ________________________
+Create a function calculate that takes two numbers and a callback function.
+
+The callback should perform sum, multiply, or subtract.
+_____________________ Answer ________________________________________ */
+// function callback(a,b){let final = a + b;
+//     return final;
+// }
+
+// function general(cb){ return cb(4,5)}
+
+// let ans = general(callback)
+// console.log(ans)
+
+
+
+/*___________________________ Question no 41 ________________________
+regular expression
 
 _____________________ Answer ________________________________________ */
+// let str = 'hel8lo';
+// let ans = /\d/.test(str);
+// console.log(ans)
+// let str = 'abc123def45';
+// let digits = str.match(/\d/g);
+// let condtion = (digits)?(digits.length):(0);
+// console.log(condtion)
 
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
+// test 
+// let str = 'hello2';
+// let check = /\d/.test(str);
+// console.log(check)
+/*___________________________ Question no 42 ________________________
+.test()
 _____________________ Answer ________________________________________ */
+// let strin = 'Hello';
+// let check = /\d/.test(strin);
+// console.log(check)
 
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
+/*___________________________ Question no 43 ________________________
+.match()
 _____________________ Answer ________________________________________ */
+// let str = 'hel4lo2';
+// let check = str.match(/\d/g);
+// let ans = check.length;
+// console.log(ans)
+// console.log(check)
 
 
-/*___________________________ Question no 1 ________________________
+/*___________________________ Question no 44 ________________________
+ Math Operation
+Create a function that takes two numbers and a callback.
 
+The callback should decide whether to add, subtract, or multiply the numbers.
 _____________________ Answer ________________________________________ */
+function mainFunction(a,b,cb){let getCb = cb();
+    let getA = a;
+    let getB = b;
+    return function(){let result;
+        if(getCb === 'add'){result = getA + getB;
+            return result;
+        }
+       else if(getCb === 'subtract'){result = getA - getB;
+            return result;
+        }
+      else  if(getCb === 'multiply'){result = getA * getB;
+            return result;
+        }
+        else if(getCb === '/'){result = getA / getB;
+            return result;
+        }
+        else{result = 'give proper operator';
+            return result;
+        }
+    }
+    return result;
 
+}
 
-/*___________________________ Question no 1 ________________________
+function callback(){return '/';}
 
+let ans = mainFunction(4,3,callback);
+console.log(ans())
+/*___________________________ Question no 45 ________________________
+Check Even or Odd
+Make a function that takes a number and a callback.
+
+The callback should check if the number is even or odd and give the result.
 _____________________ Answer ________________________________________ */
+// function callback(num){if(num % 2 === 0){console.log('Even')}
+// else{console.log('Odd')}
+// return;}
 
+// function mainFunction(callback){
+//     return callback(7)
+// }
 
+//  mainFunction(callback);
 
-/*___________________________ Question no 1 ________________________
+/*___________________________ Question no 46 ________________________
+Write logic to reverse this string:
 
+Input:  "JavaScript"
+Output: "tpircSavaJ"
 _____________________ Answer ________________________________________ */
+// let str = 'JavaScript';
+// let revesed = '';
+// for(let i = str.length -1; i >=0;i--){revesed = revesed + str[i]}
+// console.log(revesed)
 
 
+/*___________________________ Question no 47 ________________________
+Count how many vowels (a, e, i, o, u) exist in a string.
 
-/*___________________________ Question no 1 ________________________
-
+Input:  "Hello World"
+Output: 3
 _____________________ Answer ________________________________________ */
+// let str = 'Abas';
+// let count = 0;
+// for(let i = 0;i < str.length;i++){let char = str[i];
+//     if(char === 'A' || char === 'a'||char === 'E' || char === 'e' || char === 'i'||char === 'I'||char === 'o'||char === 'O'||char === 'U'||char === 'u')
+//         count++;
+ 
+// }
+// console.log(count)
 
 
-
-/*___________________________ Question no 1 ________________________
-
+/*___________________________ Question no 48 ________________________
+count vowel
 _____________________ Answer ________________________________________ */
+// let str = 'HEllo'; 
+//    str = str.toLowerCase();
+// let count = 0;
+// for(let key of str){let required = key;
+    
+//     if(required === 'a'||required === 'e'|| required === 'i'||required === 'o'||required === 'u')
+//     {count++;}
+// }
+// console.log(count)
 
 
+/*___________________________ Question no 49 ________________________
+Create a function createSecret that takes a message as a parameter.
+It should return another function that, when called, gives that secret message.
 
-/*___________________________ Question no 1 ________________________
-
+Expected Output:
+let secret = createSecret("My Password is 123");
+secret(); // Output: "My Password is 123"
 _____________________ Answer ________________________________________ */
+// function createSecret(password){
+//     return function(){return password;}
+    
+// }
+// let secret = createSecret('32');
+// console.log(secret())
 
 
+/*___________________________ Question no 50 ________________________
+Make a function createCounter that starts counting from 0.
+Every time you call the inner function, it should increase the counter by 1.
 
-
-
-/*___________________________ Question no 1 ________________________
-
+Expected Output:
+let counter = createCounter();
+counter(); // Output: 1
+counter(); // Output: 2
+counter(); // Output: 3
 _____________________ Answer ________________________________________ */
+// function createCounter(){let count = 0;
+//     return function(){ return  count++;}
+// }
+// let ans = createCounter();
+// console.log(ans());
+// console.log(ans());
+// console.log(ans())
 
 
 
 
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
-
-
-
-
-
-/*___________________________ Question no 1 ________________________
-
-_____________________ Answer ________________________________________ */
